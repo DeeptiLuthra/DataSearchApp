@@ -1,0 +1,36 @@
+﻿<div >
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Accounts
+                </th>
+                <th>
+                    Properties
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><table >
+                    <tr ng-repeat="account in clientAccounts">
+                        <td>
+                           <button ng-bind="account.AccountName" ng-click="GetProperties($index)" ></button> 
+                        </td>
+                        <td>
+                            <table>
+                                <tr ng-repeat="property in account.Properties">
+                                    <td >
+                                        <button ng-click="PopUpAlert(account.AccountName, property.Name);"  ng-bind="property.Name"> </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    </table></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
